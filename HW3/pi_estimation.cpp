@@ -28,7 +28,6 @@ int main(int argc, char** argv) {
     }
 
     float pi = (static_cast<float>(hit_cnt) / static_cast<float>(LIMIT_COUNT)) * 4;;
-
     std::cout << "Estimated pi:" << pi << std::endl;
 
     return 0;
