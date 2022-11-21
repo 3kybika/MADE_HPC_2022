@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "typeinfo": "cpp",
+        "new": "cpp",
+        "algorithm": "cpp",
+        "stdio.h": "c",
+        "unistd.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
+    }
+}
