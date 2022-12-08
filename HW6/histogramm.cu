@@ -36,18 +36,18 @@ __global__ void calcHistogram(
     int start_idx = chunk_image_size * block_start;
     int end_idx = start_idx + chunk_image_size;
 
-    double localHistogram[256];
+    double cur_histogram_arr[256];
     for (int i = 0; i < 256; ++i)
-        localHistogram[i] = 0.;
+        cur_histogram_arr[i] = 0;
 
     if (end_idx > image_size)
         end_idx = image_size;
 
     for(int i = start_idx; i < end_idx; ++i)
-        localHistogram[source_image[i]] += 1.;
+        cur_histogram_arr[source_image[i]] += 1;
 
     for(int i = 0; i < 256; ++i)
-        atomicAdd(&histogram_arr[i], localHistogram[i]);
+        atomicAdd(&histogram_arr[i], cur_histogram_arr[i]);
 
 }
 
