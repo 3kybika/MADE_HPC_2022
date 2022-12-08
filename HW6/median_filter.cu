@@ -1,5 +1,5 @@
 /*
-Complie:
+Compiling:
     nvcc -arch sm_86 ./median_filter.cu -o median_filter
 Using:
     ./median_filter <source_file_name> <target_file_name>
@@ -89,7 +89,7 @@ int main(int argc, char **argv) {
         )
     ) {
         printf("App for blurring the image by median filter\n\n");
-        printf("Complie:\n");
+        printf("Compiling:\n");
         printf("    nvcc -arch sm_86 ./median_filter.cu -o median_filter\n");
         printf("Using:\n");
         printf("    ./median_filter <source_file_name> <target_file_name>\n");

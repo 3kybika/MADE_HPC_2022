@@ -1,5 +1,5 @@
 /*
-Complie:
+Compiling:
     nvcc -arch sm_86 ./histogramm.cu -o histogramm
 Using:
     ./histogramm <source_file_name>
@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
         )
     ) {
         printf("App for getting histogram of image\n\n");
-        printf("Complie:\n");
+        printf("Compiling:\n");
         printf("    nvcc -arch sm_86 ./histogramm.cu -o histogramm\n");
         printf("Using:\n");
         printf("    ./median_filter <source_file_name>\n");

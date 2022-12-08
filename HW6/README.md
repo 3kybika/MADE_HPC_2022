@@ -42,16 +42,16 @@ for(int k=-2;k<=2; k++)
     target_file_name - path to target file, default value: default_tamplate_filter.jpg
 ```
 Исходное изображение:  
-![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/default.jpg)
+![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![default_tamplate_filter_result](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/default_tamplate_filter_result.jpg)
+![default_tamplate_filter_result](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_tamplate_filter_result.jpg)
 
 Исходное изображение:  
-![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/cosmos.jpg)
+![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/cosmos_template.jpg)
+![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_template.jpg)
 
 б) Median filter (25 баллов)  
 Имплементируйте https://en.wikipedia.org/wiki/Median_filter на CUDA
@@ -66,16 +66,16 @@ for(int k=-2;k<=2; k++)
     target_file_name - path to target file, default value: default_median_filter.jpg
 ```
 Исходное изображение:  
-![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/default.jpg)
+![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![default_median_filter](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/default_median_filter.jpg)
+![default_median_filter](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_median_filter.jpg)
 
 Исходное изображение:  
-![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/cosmos.jpg)
+![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/HW6/cosmos_median.jpg)
+![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_median.jpg)
 
 2. Гистограмма картинки
 Загрузите или создайте картинку (если она цветная можете конвертировать в grayscale или сделать гистограмму для каждого канала), сделайте гистограмму по яркости. (50 баллов)
