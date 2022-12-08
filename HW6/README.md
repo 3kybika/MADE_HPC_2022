@@ -1,25 +1,10 @@
-cosmos.jpg
-
-
-nvcc -arch sm_86 ./median_filter.cu -o median_filter
-./median_filter
-./median_filter --help
-nvcc -arch sm_86 template_filter.cu -o template_filter
-./template_filter
-./template_filter --help
-./template_filter cosmos.jpg cosmos_template.jpg
-./median_filter cosmos.jpg cosmos_median.jpg
-
-
-
-
 # Домашнее задание 7: (ДЗ-6)  
   
 1. Размытие картинки и "Median filter"  
-Возьмите произвольную картинку (цветную или черно-белую).
-
+Возьмите произвольную картинку (цветную или черно-белую).  
+  
 а) Фильтр по шаблону (25 баллов).  
-В каждом пикселе картинки надо усреднить по шаблону с коэффициентами в окрестности данного пикселя. Например, для шаблона 5x5:
+В каждом пикселе картинки надо усреднить по шаблону с коэффициентами в окрестности данного пикселя. Например, для шаблона 5x5:  
 ```
 for(int k=-2;k<=2; k++)
 {
@@ -29,65 +14,66 @@ for(int k=-2;k<=2; k++)
     }
 }
 ```
-
+  
 Продемонстрируйте результат размытия для 2 разных шаблонов.  
-
-**Результат**
+  
+**Результат**  
 Код представлен в файле `template_filter.cu`  
 Компиляция: `nvcc -arch sm_86 ./template_filter.cu -o template_filter`  
-Запуск:
+Запуск:  
 ```
     ./template_filter <source_file_name> <target_file_name>
     source_file_name - path to source file, default value: default.jpg
     target_file_name - path to target file, default value: default_tamplate_filter.jpg
 ```
 Исходное изображение:  
-![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)
+![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)  
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![default_tamplate_filter_result](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_tamplate_filter_result.jpg)
-
+![default_tamplate_filter_result](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_tamplate_filter_result.jpg)  
+  
 Исходное изображение:  
-![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)
+![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)  
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_template.jpg)
+![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_template.jpg)  
 
 б) Median filter (25 баллов)  
-Имплементируйте https://en.wikipedia.org/wiki/Median_filter на CUDA
-
-**Результат**
+Имплементируйте https://en.wikipedia.org/wiki/Median_filter на CUDA  
+  
+**Результат**  
 Код представлен в файле `template_filter.cu`  
 Компиляция: `nvcc -arch sm_86 ./median_filter.cu -o median_filter`  
-Запуск:
+Запуск:  
 ```
     ./template_filter <source_file_name> <target_file_name>
     source_file_name - path to source file, default value: default.jpg
     target_file_name - path to target file, default value: default_median_filter.jpg
 ```
 Исходное изображение:  
-![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)
+![default](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default.jpg)  
 
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![default_median_filter](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_median_filter.jpg)
-
+![default_median_filter](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/default_median_filter.jpg)  
+  
 Исходное изображение:  
-![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)
-
+![cosmos](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos.jpg)  
+  
 Результат применения фильтра (фильтр состоит целиком из 1):  
-![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_median.jpg)
-
-2. Гистограмма картинки
-Загрузите или создайте картинку (если она цветная можете конвертировать в grayscale или сделать гистограмму для каждого канала), сделайте гистограмму по яркости. (50 баллов)
-**Результат**
+![cosmos_median](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/cosmos_median.jpg)  
+  
+2. Гистограмма картинки  
+Загрузите или создайте картинку (если она цветная можете конвертировать в grayscale или сделать гистограмму для каждого канала), сделайте гистограмму по яркости.  
+  
+**Результат**  
 Код представлен в файле `template_filter.cu`  
 Компиляция: `nvcc -arch sm_86 ./histogramm.cu -o histogramm`  
-Запуск:
+Запуск:  
 ```
     ./histogramm <source_file_name>
     source_file_name - path to source file, default value: default.jpg
 ```
-
+  
 Пример вывода:  
 ```
 Result for default.jpg:
