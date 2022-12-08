@@ -335,4 +335,4 @@ Result for default.jpg:
 255: 0.16336420
 ```
 
-Также есть реализация в юпитере: ![histogram.ipynb](https://raw.githubusercontent.com/3kybika/MADE_HPC_2022/main/HW6/histogram.ipynb)  
+Также есть реализация в юпитере: ![histogram.ipynb](https://github.com/3kybika/MADE_HPC_2022/blob/main/HW6/histogram.ipynb)  
